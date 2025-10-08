@@ -2,7 +2,7 @@
 
 ## Aula 1
 
-### 📘 Engenharia de Software – Resumo Explicativo e Dinâmico
+### 📘 Engenharia de Software – Fundamentos
 
 A **Engenharia de Software** é o ramo da engenharia que aplica métodos científicos, técnicos e organizacionais para o desenvolvimento de **sistemas de software confiáveis, eficientes e de qualidade**.
 
@@ -114,4 +114,143 @@ A **Crise do Software** revelou que **programar não é engenheirar software**.
 A Engenharia de Software surgiu para **planejar, medir, controlar e evoluir** sistemas com foco em qualidade.
 
 Com **processos estruturados, métodos técnicos e ferramentas adequadas**, a disciplina garante que o software seja **eficiente, sustentável e seguro**, acompanhando o ritmo da inovação tecnológica.
+
+---
+
+## Aula 2 – Requisitos
+
+### 🎯 Objetivos da Aula
+
+* **Motivar a utilização da gerência de requisitos** no dia a dia dos projetos;
+* **Apresentar os conceitos fundamentais** da gerência de requisitos;
+* **Explorar os artefatos principais** utilizados nesse processo.
+
+> ⚠️ Desenvolver sistemas vai muito além da programação! Antes de escrever uma linha de código, é essencial entender o problema, levantar as necessidades e alinhar expectativas com o cliente.
+
+---
+
+### 🧱 Importância da Gerência de Requisitos
+
+O gerenciamento de requisitos é o **primeiro passo para garantir um sistema de qualidade**, entregue **no prazo**, **dentro do orçamento** e que realmente **atenda às necessidades do cliente**.
+
+Uma **má gestão de requisitos** pode levar a retrabalho, atrasos e altos custos de manutenção. Erros descobertos após a entrega de um sistema podem custar **até 100 vezes mais** do que se fossem identificados durante a fase de especificação.
+
+---
+
+### 💸 Custo dos Erros
+
+Erros em requisitos são os **mais caros** de corrigir quando descobertos tardiamente.
+Principais causas:
+
+* Técnicas de elicitação ou validação de requisitos inadequadas;
+* Desconhecimento do domínio do problema;
+* Inexperiência da equipe;
+* Falta de acordo com o cliente;
+* Falta de acompanhamento das mudanças de requisitos.
+
+🔹 **Conclusão:** quanto mais cedo o erro é descoberto, **menor o custo** de correção.
+
+---
+
+### 📘 Conceitos Fundamentais
+
+#### O que é um Requisito?
+
+> Uma condição que o sistema deve contemplar para solucionar uma necessidade do cliente.
+
+#### O que é Gerência de Requisitos?
+
+> Processo sistemático para **capturar, organizar, documentar e gerenciar requisitos**, garantindo um **acordo contínuo** entre o cliente e a equipe sobre alterações ou exclusões de requisitos.
+
+---
+
+### ⚙️ Tipos de Requisitos
+
+#### 🟢 Requisitos Funcionais
+
+São as **funcionalidades específicas** que o sistema deve realizar.
+**Exemplos:**
+
+* Permitir o registro de usuários;
+* Realizar consultas no banco de dados;
+* Gravar imagens;
+* Calcular impostos.
+
+#### 🔵 Requisitos Não Funcionais
+
+São as **características de qualidade** e restrições do sistema.
+**Exemplos:**
+
+* **Desempenho:** páginas devem carregar em menos de 3 segundos;
+* **Segurança:** dados sensíveis devem ser criptografados;
+* **Usabilidade:** interface simples e intuitiva;
+* **Confiabilidade:** o sistema não deve falhar mais de X vezes por mês.
+
+---
+
+### 🔍 Análise do Problema
+
+Antes de desenvolver qualquer sistema, é essencial **entender o problema real**.
+Etapas principais:
+
+1. **Compreender a necessidade real do cliente;**
+2. **Identificar stakeholders** (pessoas envolvidas no sistema);
+3. **Definir fronteiras e restrições** do sistema;
+4. Criar um **glossário comum** de termos;
+5. Documentar a **visão geral do sistema** (problema, solução, características);
+6. **Formalizar o acordo** entre cliente e desenvolvedores.
+
+👉 Essa fase evita retrabalho e garante que todos falem a “mesma língua”.
+
+---
+
+### 🧩 Modelos de Processos de Software
+
+Os modelos de processo orientam **como o desenvolvimento é estruturado**. Eles representam **diferentes abordagens** para construir e evoluir sistemas.
+
+#### 1. **Modelo em Cascata (Clássico)**
+
+* Desenvolvimento **sequencial e linear** (análise → projeto → implementação → testes → manutenção);
+* Ideal quando os requisitos são **bem definidos e estáveis**;
+* Pouco recomendado hoje, pois **não lida bem com mudanças** durante o processo.
+
+#### 2. **Modelo Incremental**
+
+* O sistema é desenvolvido **em partes (incrementos)**;
+* Permite **entregar versões parciais** que já agregam valor ao cliente;
+* Cada incremento adiciona novas funcionalidades.
+
+> Exemplo: primeiro módulo de login → depois relatórios → depois pagamentos.
+
+#### 3. **Modelos Evolucionários**
+
+Esses modelos aceitam que o software **evolui com o tempo**, adaptando-se às mudanças do negócio e às novas demandas do cliente.
+
+* **Prototipação:** desenvolvimento iterativo com feedback contínuo do usuário; versões simples evoluem até o sistema final.
+* **Modelo Espiral:** combina características do modelo cascata e da prototipagem; a cada iteração, o sistema é aprimorado com novos requisitos e validações.
+
+---
+
+### 🔄 Ciclo de Vida e Manutenção
+
+Após a entrega do software:
+
+* Defeitos não descobertos surgem no início da operação;
+* O sistema entra em fase de **estabilidade**;
+* **Novas modificações** podem introduzir erros, elevando os custos;
+* O software **não se desgasta fisicamente**, mas **deteriora-se logicamente** com o tempo se não for atualizado.
+
+---
+
+### 💡 Conclusão
+
+A **engenharia de requisitos** é essencial para o sucesso de qualquer projeto de software.
+Ela garante:
+
+* Melhor **comunicação com o cliente**;
+* **Redução de retrabalho** e custos;
+* **Aumento da qualidade e confiabilidade** do sistema.
+
+> Em resumo, um sistema bem planejado é resultado de **requisitos bem gerenciados** — o código é apenas a consequência de um entendimento claro do problema.
+
 
