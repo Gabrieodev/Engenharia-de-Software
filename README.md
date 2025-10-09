@@ -253,4 +253,181 @@ Ela garante:
 
 > Em resumo, um sistema bem planejado é resultado de **requisitos bem gerenciados** — o código é apenas a consequência de um entendimento claro do problema.
 
+---
+
+# 🧠 Engenharia de Software
+
+## Aula 3 – Engenharia de Requisitos
+
+### 🎯 Objetivo da Aula
+
+Compreender o papel da **Engenharia de Requisitos** dentro do ciclo de vida do software, identificando como ela transforma **necessidades do cliente** em **especificações técnicas claras e rastreáveis**.
+
+A aula destaca a importância de **evitar ambiguidades**, **controlar mudanças** e **garantir que o sistema realmente resolva o problema proposto**, mantendo sempre o foco na qualidade e no alinhamento entre **usuário, equipe técnica e negócio**.
+
+### 📘 Contexto Visual
+
+A imagem a seguir ilustra o papel central da **Engenharia de Requisitos** como elo entre as necessidades do cliente e as soluções técnicas desenvolvidas pela equipe.
+Ela evidencia como essa etapa organiza, documenta e traduz expectativas em requisitos bem definidos.
+
+<img width="212" height="217" alt="Captura de tela 2025-10-08 210347" src="https://github.com/user-attachments/assets/b4fa3330-4988-4f70-b290-f78a98bd7b65" />
+
+---
+
+
+### 📘 O que é Engenharia de Requisitos
+
+A **Engenharia de Requisitos** é uma disciplina fundamental da Engenharia de Software que se concentra em **definir, documentar e manter os requisitos** de um sistema.
+Ela busca traduzir as **necessidades e expectativas do cliente** em uma base sólida que orienta todo o desenvolvimento.
+
+> 💡 Mais do que listar funcionalidades, a Engenharia de Requisitos busca **entender o contexto**, **os objetivos de negócio** e **a experiência do usuário final**, garantindo que o produto final tenha **valor real** e **qualidade técnica**.
+
+---
+
+### ⚖️ Requisitos x Regras de Negócio
+
+É comum confundir **requisitos** com **regras de negócio**, mas são conceitos diferentes e complementares:
+
+| Conceito             | Descrição                                                                        | Exemplo                                                                                                               |
+| -------------------- | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| **Requisito**        | Define **o que** o sistema deve fazer.                                           | Validar número de cartão de crédito; Processar uma venda.                                                             |
+| **Regra de Negócio** | Define **como** o sistema deve operar segundo políticas e restrições da empresa. | O cliente só pode concluir o cadastro se tiver um cartão válido; Compras acima de 4 itens iguais têm 10% de desconto. |
+
+➡️ Ou seja, **os requisitos seguem as regras de negócio**, garantindo que o software atenda às políticas e estratégias da organização.
+
+---
+
+### 🔄 Processo de Engenharia de Requisitos
+
+A Engenharia de Requisitos envolve **cinco etapas principais**, que garantem clareza, consistência e rastreabilidade durante todo o ciclo de vida do projeto.
+
+#### 1. **Elicitação dos Requisitos**
+
+Coleta das **necessidades e expectativas** dos stakeholders (usuários, clientes, gestores etc.).
+**Técnicas utilizadas:**
+
+* Entrevistas;
+* Questionários e pesquisas;
+* Observação direta;
+* Reuniões JAD (Joint Application Development);
+* Workshops e brainstorming.
+
+> O objetivo é capturar informações de forma colaborativa, garantindo que as necessidades reais sejam compreendidas.
+
+---
+
+#### 2. **Análise dos Requisitos**
+
+Fase de **interpretação e refinamento** dos dados coletados.
+Aqui são detectados **conflitos**, **inconsistências** e **prioridades**.
+Também se avalia **se o requisito é realmente necessário** e se **agrega valor ao negócio**.
+
+> Essa análise evita incluir exigências irrelevantes, duplicadas ou inviáveis.
+
+---
+
+#### 3. **Especificação dos Requisitos**
+
+Consiste em **documentar os requisitos** de forma clara e estruturada.
+Os principais artefatos produzidos incluem:
+
+* **Documento de Visão** (propósito e objetivos do sistema);
+* **Casos de Uso** (funcionalidades e interações do usuário);
+* **Especificação de Interface Gráfica**;
+* **Diagramas de fluxo ou modelos UML.**
+
+> A boa documentação garante comunicação efetiva entre cliente, analistas e desenvolvedores.
+
+---
+
+#### 4. **Validação dos Requisitos**
+
+Etapa para **garantir que os requisitos sejam corretos, completos e não ambíguos**.
+É o momento de eliminar dúvidas e interpretações duplas, garantindo que o que foi escrito **reflete exatamente o que o cliente deseja**.
+
+⚠️ **Exemplos de ambiguidade:**
+
+* “O sistema deve ser fácil de usar.” → O que significa “fácil”?
+* “O sistema deve ser rápido.” → Qual é o tempo máximo aceitável de resposta?
+
+> A validação evita retrabalho, erros de interpretação e divergências futuras.
+
+---
+
+#### 5. **Gerenciamento dos Requisitos**
+
+Refere-se ao **controle contínuo das mudanças** durante o projeto.
+Como requisitos podem **mudar com o tempo**, é fundamental que cada alteração seja:
+
+* **Rastreada** (origem e motivo da mudança);
+* **Analisada quanto ao impacto** (prazo, custo e escopo);
+* **Aprovada pelos stakeholders**.
+
+> O gerenciamento mantém o projeto sob controle e garante que cada modificação seja legítima e viável.
+
+---
+
+### 🔁 Mudanças nos Requisitos
+
+#### Por que os requisitos mudam?
+
+* Perguntas erradas ou incompletas no início do projeto;
+* Mudanças no negócio ou nas prioridades;
+* Novas tecnologias ou limitações orçamentárias;
+* Mudança de opinião dos usuários.
+
+> As mudanças são **inevitáveis**, mas precisam ser **controladas e documentadas** para não comprometer o projeto.
+
+---
+
+### ⚙️ Análise de Impacto das Mudanças
+
+Sempre que um requisito muda, é preciso **avaliar o impacto** sobre o sistema como um todo.
+
+**Passos principais:**
+
+1. Verificar se a mudança é realmente necessária;
+2. Identificar quais requisitos e artefatos serão afetados;
+3. Descrever a mudança e sua origem;
+4. Estimar custo, esforço e riscos;
+5. Decidir pela implementação ou não da mudança.
+
+> Essa prática evita decisões impulsivas e protege a integridade do projeto.
+
+---
+
+### 🧭 Boas Práticas no Gerenciamento de Mudanças
+
+* Manter **comunicação contínua com os stakeholders**;
+* Ter um **canal formal** para solicitar alterações;
+* **Documentar e rastrear** todas as mudanças;
+* **Revisar o escopo** do projeto, se necessário;
+* Garantir **acordo e aprovação** de todas as partes envolvidas.
+
+---
+
+### 🪞 A Importância dos Detalhes
+
+> “Quem não dá importância aos detalhes, não terá êxito nas grandes coisas.”
+
+Na engenharia de software, **detalhes definem a qualidade**.
+Pequenas omissões ou ambiguidades em requisitos podem gerar **grandes retrabalhos e custos**.
+Ser **detalhista** é compreender profundamente o problema, **antecipar riscos** e **assegurar qualidade em todas as etapas**.
+
+---
+
+### 💡 Conclusão
+
+A Engenharia de Requisitos é o **alicerce de um software bem-sucedido**.
+Ela garante:
+
+* Clareza na comunicação com o cliente;
+* Controle das mudanças e redução de falhas;
+* Entregas mais previsíveis e de qualidade.
+
+> Em resumo: **sem requisitos bem definidos, não há software bem desenvolvido.**
+> A codificação é apenas a execução de um entendimento que deve começar claro, validado e bem gerenciado.
+
+---
+
 
