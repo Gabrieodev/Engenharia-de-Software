@@ -677,182 +677,319 @@ Atributos: nome, idade, sexo
 Métodos: falar(), andar(), dormir()
 ```
 
-Cada pessoa criada no sistema (Maria, João, Ana...) é um objeto, ou seja, uma instância da classe Pessoa.
+---
 
-💡 Resumo:
+## 👤 Objetos como Instâncias de uma Classe
 
-Classe → projeto, modelo.
+Cada pessoa criada no sistema (Maria, João, Ana...) é um **objeto**, ou seja, uma **instância da classe `Pessoa`**.  
+Enquanto a classe define **o modelo** (estrutura e comportamento), os objetos representam **as ocorrências reais** dessa definição em execução.
 
-Objeto → instância criada em tempo de execução.
+---
 
-Classe é definida durante o desenvolvimento.
+## 💡 Resumo
 
-Objeto existe durante o processamento do sistema.
+| Conceito | Descrição |
+|-----------|------------|
+| 🧱 **Classe** | Projeto ou modelo que define atributos e comportamentos. |
+| ⚙️ **Objeto** | Instância da classe criada em tempo de execução. |
+| 🧩 **Classe é definida** | Durante o desenvolvimento (projeto). |
+| 🚀 **Objeto existe** | Durante o processamento do sistema (execução). |
 
-🧩 Composição de uma Classe (em UML)
-Uma classe, em UML, é representada por um retângulo dividido em três partes:
+---
 
-Parte	Conteúdo	Descrição
-🔹 Topo	Nome da classe	Identifica o tipo de objeto
-🔹 Meio	Atributos	Variáveis que descrevem o estado do objeto
-🔹 Base	Métodos	Funções que definem o comportamento
+## 🧩 Composição de uma Classe em UML
 
-📘 Exemplo em UML:
+Uma **classe**, em UML, é representada por um **retângulo dividido em três partes**, cada uma com uma função específica.
 
-markdown
-Copiar código
--------------------------
-|        Pessoa         |
--------------------------
-| nome: string          |
-| idade: int            |
--------------------------
-| falar()               |
-| andar()               |
--------------------------
-⚙️ Métodos
-Os métodos são funções dentro da classe que definem as ações que um objeto pode realizar.
-Eles são declarados dentro da própria classe e podem manipular ou alterar os valores de seus atributos.
+| Parte | Conteúdo | Descrição |
+|--------|-----------|------------|
+| 🔹 **Topo** | Nome da classe | Identifica o tipo de objeto. |
+| 🔹 **Meio** | Atributos | Variáveis que descrevem o estado do objeto. |
+| 🔹 **Base** | Métodos | Funções que definem o comportamento. |
 
-📌 Importante:
+---
 
-Todos os objetos criados de uma classe herdam seus métodos e atributos.
+## ⚙️ Métodos
 
-Métodos permitem o comportamento dinâmico dos objetos.
+Os **métodos** são **funções internas da classe** que determinam as **ações que o objeto pode executar**.  
+Eles manipulam os **atributos** e **definem o comportamento dinâmico** do objeto.
 
-🔍 Características dos Objetos
-Todo objeto possui três elementos essenciais:
+### 📌 Importante:
+- Todos os objetos criados de uma classe **herdam seus métodos e atributos**.  
+- Métodos **definem o comportamento ativo** de cada instância.  
 
-Característica	Descrição
-🪪 Identidade	Cada objeto tem uma identidade única que o diferencia dos demais.
-🧠 Estado	Representa os valores atuais de seus atributos (podem mudar durante o tempo).
-⚙️ Comportamento	Define as ações (métodos) que o objeto pode executar.
+---
 
-📘 Objetos podem representar:
+## 🔍 Características dos Objetos
 
-Coisas tangíveis (carro, livro, pessoa)
+Todo **objeto** possui três elementos fundamentais que o definem:
 
-Processos (empréstimo, transação)
+| Característica | Descrição |
+|----------------|------------|
+| 🪪 **Identidade** | Cada objeto tem uma identidade única, que o diferencia dos demais. |
+| 🧠 **Estado** | Representa os valores atuais de seus atributos (podem mudar ao longo do tempo). |
+| ⚙️ **Comportamento** | Define as ações (métodos) que o objeto pode realizar. |
 
-Eventos (compra, reserva, inscrição)
+### 📘 Objetos podem representar:
+- Coisas tangíveis: carro, livro, pessoa.  
+- Processos: empréstimo, transação.  
+- Eventos: compra, reserva, inscrição.
 
-💡 Todo objeto:
+### 💡 Todo objeto:
+- Está sempre associado a uma classe.  
+- É uma instância dessa classe.  
+- Compartilha estrutura e comportamento comuns.  
+- Pode ser criado, modificado e destruído.
 
-Está sempre associado a uma classe;
+---
 
-É uma instância da classe;
+## 🔢 Cardinalidade / Multiplicidade
 
-Compartilha estrutura e comportamento definidos pelo modelo;
+A **cardinalidade** indica **quantos objetos de uma classe** podem estar **associados a outra**.
 
-Pode ser criado, modificado e destruído.
+| Cardinalidade | Significado |
+|----------------|--------------|
+| `1` | Exatamente um |
+| `0..1` | Zero ou um |
+| `*` | Muitos |
+| `1..*` | Um ou muitos |
+| `N..M` | Entre N e M |
 
-🧮 Diagrama de Classes
-Um diagrama de classes representa a estrutura estática de um sistema, mostrando as classes, atributos, métodos e relacionamentos entre elas.
+### 📘 Exemplo:
+Em um sistema escolar:  
+- Um **Aluno** pode se matricular em **um curso**.  
+- Cada **Curso** pode ter **nenhum ou vários alunos**.
 
-📘 Funções principais:
+---
 
-Identificar classes e suas responsabilidades;
+## 🧬 Generalização e Especialização (Herança)
 
-Visualizar a modelagem de dados e regras de negócio;
+A **herança** é um tipo de relacionamento em que uma **subclasse** herda atributos e métodos de uma **superclasse**.
+💡 As subclasses **especializam** a superclasse, **adicionando comportamentos e atributos específicos**, mas mantendo as características comuns.
 
-Ajudar a projetar tabelas de banco de dados.
+---
 
-💡 Cada classe do diagrama geralmente se torna uma tabela no banco de dados.
+## 🧠 Polimorfismo
 
-🔗 Tipos de Relacionamentos entre Classes
-Tipo	Símbolo	Descrição
-🧬 Generalização / Especialização (Herança)	Triângulo	Uma classe filha herda atributos e métodos da classe pai.
-🔄 Associação	Linha simples	Conexão entre objetos (ex: Cliente faz Pedido).
-⚫ Agregação	Diamante aberto	Relação onde uma classe contém outras, mas as partes têm vida independente.
-⚫ Composição	Diamante fechado	Relação onde as partes não existem sem o todo.
+O **polimorfismo** significa *“muitas formas”* — ele ocorre quando **diferentes classes herdam o mesmo método**, mas **o implementam de maneiras diferentes**.
 
-🧩 O que são Relacionamentos?
-Um relacionamento representa a conexão física ou conceitual entre objetos ou classes.
+### 📘 Exemplo:
+A superclasse `Forma` possui o método `calcularArea()`.  
+As subclasses `Retângulo`, `Triângulo` e `Quadrado` herdam esse método, mas cada uma calcula a área de forma diferente.  
 
-📘 Exemplo:
+💡 Assim, o mesmo método pode ter **múltiplos comportamentos**, dependendo do tipo de objeto que o executa.
 
-objectivec
-Copiar código
-CLIENTE        PEDIDO
-   1           *
-👉 Um cliente pode fazer vários pedidos, mas cada pedido pertence a um cliente.
+---
 
-🔢 Cardinalidade / Multiplicidade
-A cardinalidade mostra quantos objetos de uma classe podem estar associados a objetos de outra classe.
+## 🧩 Composição
 
-Cardinalidade	Significado
-1	Exatamente um
-0..1	Zero ou um
-*	Muitos
-1..*	Um ou muitos
-N..M	Entre N e M
+A **composição** ocorre quando uma classe é **formada por outras classes**, mas as partes **não têm existência independente**.  
+Se o objeto principal for destruído, **as partes também deixam de existir**.
 
-📘 Exemplo:
+### 📘 Exemplo:
+Uma classe `Carro` é composta por:
+- `Motor`
+- `Rodas`
+- `Portas`
 
-Em um sistema escolar, um Aluno pode se matricular em 1 curso,
-e cada Curso pode ter nenhum ou vários alunos.
+Se o **Carro** for destruído, seus **componentes também deixam de existir**.  
+**Símbolo:** Diamante fechado (⚫)
 
-🧬 Generalização e Especialização (Herança)
-A herança é um tipo de relacionamento em que uma subclasse herda atributos e métodos de uma superclasse.
+---
 
-📘 Exemplo:
+## ⚪ Agregação
 
-makefile
-Copiar código
-Superclasse: Pessoa
-  ├── nome
-  ├── endereço
-  └── telefone
+A **agregação** representa uma **relação mais fraca** entre classes.  
+As partes **podem existir independentemente** do todo.
 
-Subclasse: Pessoa Física
-  ├── cpf
-  ├── dataNascimento
-  └── filiação
+### 📘 Exemplo:
+Um `Departamento` agrega vários `Funcionários`.  
+Se o `Departamento` for excluído, os `Funcionários` continuam existindo.  
+**Símbolo:** Diamante aberto (⚪)
 
-Subclasse: Pessoa Jurídica
-  ├── cnpj
-  └── inscriçãoEstadual
-💡 As subclasses complementam e especializam a superclasse, que fornece características comuns.
+---
 
-🧠 Polimorfismo
-Polimorfismo significa “muitas formas”.
-Ele ocorre quando diferentes classes herdam o mesmo método, mas o implementam de maneiras distintas.
+## 💭 Reflexão Final
 
-📘 Exemplo:
-A superclasse Forma possui o método calcularArea().
-As subclasses Retângulo, Triângulo e Quadrado herdam esse método, mas cada uma calcula a área de forma diferente.
+Definir corretamente **classes, objetos e seus relacionamentos** é essencial para o sucesso de qualquer sistema **orientado a objetos**.  
+Esses conceitos fornecem a **base estrutural do software**, facilitando a **reutilização de código**, **manutenção** e **evolução** do projeto.
 
-🧩 Composição
-Na composição, uma classe é formada pela reunião de outras classes, mas os componentes não têm existência independente.
-Se o todo for destruído, as partes também são.
+### 📚 Lembre-se:
+- Uma **classe bem projetada** reflete as **regras do negócio** com clareza.  
+- Os **diagramas de classes UML** são ferramentas poderosas para **planejar, visualizar e comunicar** a arquitetura de um sistema de forma eficiente.  
+- Entender **composição, herança, agregação e polimorfismo** é fundamental para projetar **soluções escaláveis e reutilizáveis**.
 
-📘 Exemplo:
+---
 
-Uma classe Carro é composta por Motor, Rodas e Portas.
-Se o Carro deixa de existir, seus componentes também.
+## 🧮 Diagrama de Classes
 
-🧱 Símbolo: Diamante fechado (⚫)
+O **Diagrama de Classes** representa a **estrutura estática** de um sistema, mostrando suas **classes, atributos, métodos e relacionamentos**.
 
-⚪ Agregação
-Na agregação, as classes estão associadas, mas podem existir separadamente.
-A eliminação do todo não afeta a existência das partes.
+### 📘 Funções Principais
+- Identificar **classes e suas responsabilidades**.  
+- Visualizar a **modelagem de dados e regras de negócio**.  
+- Ajudar no **projeto do banco de dados**.  
 
-📘 Exemplo:
+💡 Cada classe modelada no diagrama geralmente se torna uma **tabela no banco de dados**.
 
-Um Departamento agrega vários Funcionários.
-Se o Departamento for excluído, os Funcionários continuam existindo.
+---
 
-🧱 Símbolo: Diamante aberto (⚪)
+## 🔗 Tipos de Relacionamentos entre Classes
 
-💭 Reflexão Final
-Definir corretamente as classes, objetos e relacionamentos é essencial para o sucesso de um sistema orientado a objetos.
-Esses elementos estruturam o software, facilitam a reutilização de código, manutenção e evolução do projeto.
+| Tipo | Símbolo | Descrição |
+|------|----------|------------|
+| 🧬 **Generalização / Especialização (Herança)** | 🔺 Triângulo | Uma classe filha herda atributos e métodos da classe pai. |
+| 🔄 **Associação** | ➖ Linha simples | Conexão direta entre objetos (ex.: Cliente faz Pedido). |
+| ⚪ **Agregação** | ◇ Diamante aberto | Uma classe contém outras, mas as partes têm vida independente. |
+| ⚫ **Composição** | ◆ Diamante fechado | As partes só existem enquanto o todo existir. |
 
-📚 Lembre-se:
+---
 
-Uma classe bem projetada reflete claramente as regras do negócio.
+## 🧠 Aula 6 – Diagramas Comportamentais e Interação entre Objetos
 
-Os diagramas de classes UML são ferramentas essenciais para planejar e comunicar a arquitetura do sistema.
+---
 
+### 🎯 1. Diagrama de Atividades
 
+Um **diagrama de atividades** é um tipo especial de diagrama de estado, onde todos os estados são atividades e as transições são disparadas pela **finalização das ações**.  
+Ele representa **fluxos de controle e processos**, sendo amplamente utilizado para modelar comportamentos dentro de sistemas.
 
+### 🔍 Características
+- Todos os estados representam **ações**;
+- As transições indicam **conclusões de atividades**;
+- Mostra **como o fluxo** de um processo ocorre de forma visual e sequencial.
+
+### 💡 Aplicações
+Os **diagramas de atividade** são considerados **diagramas comportamentais**, assim como:
+- Diagramas de **Caso de Uso**;
+- Diagramas de **Sequência**;
+- Diagramas de **Máquina de Estados**.
+
+Esses diagramas descrevem **o que deve acontecer** dentro do sistema, e não apenas sua estrutura.
+
+---
+
+## 🤝 2. Benefícios dos Diagramas de Atividade
+
+Os diagramas de atividade ajudam a conectar as áreas de **negócios** e **desenvolvimento**, criando uma visão unificada do processo.
+
+### ✅ Vantagens
+- Demonstrar a **lógica de um algoritmo**;
+- Descrever **etapas de um caso de uso UML**;
+- Ilustrar **processos de negócio ou fluxos de trabalho**;
+- **Simplificar** e **melhorar** casos de uso complexos;
+- Modelar **elementos de arquitetura de software**, como métodos, funções e operações.
+
+---
+
+## 💬 3. Comunicação entre Objetos
+
+A comunicação entre objetos ocorre por meio de **mensagens**, que representam a **troca de informações** entre eles dentro do sistema.
+
+### 🧩 Estrutura de uma Mensagem
+Toda mensagem é composta por três elementos:
+1. **Identificador** → Para onde a mensagem será enviada (objeto de destino);
+2. **Método** → Qual ação o objeto receptor deve executar;
+3. **Argumentos** → Dados necessários para a execução do método.
+
+#### 🧠 Tipos de Mensagens
+- **Síncrona:** o remetente **espera o retorno** antes de continuar;
+- **Assíncrona:** o remetente **não espera o retorno** para seguir o fluxo.
+
+### 📘 Exemplo
+O usuário preenche uma tela de login.  
+Os dados são enviados para o objeto da classe `Usuarios`, que possui o método `ValidarLogin`.
+
+**Mensagem enviada:**
+- **Identificador:** `Usuarios`  
+- **Método:** `ValidarLogin`  
+- **Argumentos:** `12345`, `ABCDE`
+
+---
+
+## 🕓 4. Diagrama de Sequência
+
+O **diagrama de sequência** é um **diagrama de interação (comportamental)**.  
+Ele mostra **como** e **em qual ordem** os objetos interagem para completar um processo.
+
+### 🧭 Finalidade
+Utilizado para:
+- Representar **detalhes de casos de uso UML**;
+- Modelar a **lógica de processos complexos**;
+- Compreender **interações entre objetos**;
+- Documentar ou planejar **cenários existentes ou futuros**.
+
+---
+
+## 🧩 5. Diagramas de Interação
+
+Existem **três tipos principais** de diagramas de interação:
+
+1. **Diagrama de Sequência** 🕒  
+2. **Diagrama de Comunicação** 💬  
+3. **Diagrama de Temporização** ⏱️  
+
+Esses diagramas ilustram como as partes de um sistema **interagem entre si**.  
+👉 O **diagrama de sequência** é o mais comum por ser simples e intuitivo.
+
+---
+
+## 🧱 6. Estrutura de um Diagrama de Sequência
+
+O diagrama é organizado como uma **linha do tempo** (de cima para baixo).  
+Cada objeto é representado por uma **coluna**, e as **mensagens** trocadas entre eles aparecem como **setas horizontais**.
+
+### 🔹 Principais Elementos
+
+#### ➤ Linhas de Vida (Lifelines)
+- **Ator:** representa quem inicia a interação (usuário ou sistema externo).  
+- **Fronteira:** limita o sistema, como uma interface, tela ou menu.  
+- **Entidade:** representa os **dados** do sistema (ex.: `Cliente`, `Pedido`).  
+- **Controle:** coordena e gerencia as interações entre os outros objetos.
+
+---
+
+## 📨 7. Tipos de Mensagens
+
+- **Mensagem Síncrona:**  
+  - O emissor **aguarda a resposta** antes de continuar;  
+  - Representada por uma **seta sólida**.
+
+- **Mensagem Assíncrona:**  
+  - O emissor **não precisa aguardar a resposta**;  
+  - Representada por uma **seta aberta**.
+
+---
+
+## ⚙️ 8. Barra de Ativação
+
+A **barra de ativação** é um retângulo fino desenhado sobre a linha de vida.  
+Ela mostra **por quanto tempo o objeto está ativo** durante uma interação.
+
+- Representa que o objeto foi **instanciado** e está **executando uma ação**.  
+- O **comprimento da barra** indica a **duração da atividade**.  
+- Utilizada tanto no **objeto emissor** quanto no **receptor** da mensagem.
+
+---
+
+## 🧩 9. Resumo Visual
+
+| Conceito | Descrição |
+|-----------|------------|
+| **Diagrama de Atividade** | Mostra o fluxo de ações ou etapas de um processo |
+| **Comunicação entre Objetos** | Representa como os objetos trocam informações |
+| **Diagrama de Sequência** | Demonstra a ordem e o tempo das interações |
+| **Mensagens Síncronas e Assíncronas** | Indicam se há espera pela resposta ou não |
+| **Barra de Ativação** | Mostra quando o objeto está ativo e executando uma tarefa |
+
+---
+
+## 🧭 Conclusão
+
+Os diagramas comportamentais — especialmente **atividades** e **sequência** — são ferramentas essenciais para **entender o comportamento do sistema**, **planejar interações** e **modelar processos lógicos**.  
+
+Eles tornam o desenvolvimento **mais organizado, visual e colaborativo**, ajudando tanto analistas quanto desenvolvedores a falarem a **mesma linguagem** dentro de um projeto.
+
+---
+
+> ✍️ **Obrigado!** 
