@@ -430,4 +430,229 @@ Ela garante:
 
 ---
 
+## Aula 4 – Coletando Requisitos e Modelando com UML
+
+### 🧩 Introdução
+
+Após entender o papel da **Engenharia de Requisitos**, esta aula aborda **como coletar e documentar as necessidades dos usuários**, transformando-as em histórias claras e úteis para o desenvolvimento de sistemas.  
+Também exploramos a **UML (Unified Modeling Language)** — uma ferramenta essencial para **documentar, visualizar e comunicar** como o sistema deve funcionar.
+
+---
+
+### 📋 Coleta de Requisitos a partir dos Usuários
+
+Os **requisitos de um sistema** são obtidos por meio de diferentes **técnicas de levantamento de informações**, como:
+
+- **Entrevistas** com usuários e stakeholders;  
+- **Questionários e formulários**;  
+- **Sessões de JAD (Joint Application Design)**;  
+- **Observação direta** do ambiente de trabalho;  
+- **Histórias de Usuário (User Stories)** — técnica amplamente usada em **metodologias ágeis**, como o **Scrum**.
+
+---
+
+### 🧠 O que são Histórias de Usuário (User Stories)
+
+As **User Stories** são **descrições simples e informais** de uma funcionalidade sob o ponto de vista do **usuário**.  
+O objetivo é **comunicar claramente uma necessidade real**, facilitando o entendimento entre o cliente e a equipe técnica.
+
+> 💬 “Uma história de usuário é uma conversa contínua entre o cliente e o desenvolvedor sobre como o sistema pode gerar valor.”
+
+---
+
+### 🧱 Estrutura das User Stories
+
+As histórias seguem um formato padrão:
+
+> **Como [persona], eu [quero], [para que].**
+
+**Exemplo 1:**
+- Como **cliente**,  
+  quero **visualizar o histórico de compras**,  
+  para que **possa recomprar produtos facilmente**.
+
+**Exemplo 2:**
+- Como **atendente da ouvidoria**,  
+  quero **que o sistema inicie a conversa com o usuário**,  
+  para que **haja padronização e agilidade no atendimento**.
+
+---
+
+### 🎯 Elementos da Estrutura
+
+| Elemento | Significado |
+|-----------|-------------|
+| **Como** | Representa a *persona* (usuário ideal ou papel dentro do sistema). |
+| **Quero** | Define a *necessidade real*, sem entrar em detalhes técnicos. |
+| **Para que** | Mostra o *benefício ou valor de negócio* gerado pela funcionalidade. |
+
+---
+
+### 🌟 Benefícios das User Stories
+
+- **Foco no usuário:** mantém o time centrado em resolver problemas reais, não apenas tarefas.  
+- **Colaboração:** promove discussão e entendimento entre equipe e cliente.  
+- **Criatividade:** estimula soluções inovadoras e melhoria contínua.  
+- **Ritmo e progresso:** cada história concluída representa uma pequena vitória no projeto.
+
+---
+
+## 🧭 Modelagem e Documentação com UML
+
+### 🧩 O que é UML?
+
+**UML (Unified Modeling Language)** é uma **linguagem de modelagem padrão** usada para representar graficamente **sistemas e processos complexos**.  
+Ela facilita a **comunicação entre as equipes** e ajuda a **visualizar a estrutura e o comportamento** de um sistema.
+
+**Principais características:**
+- Usa **símbolos simples e padronizados**;  
+- **Simplifica informações complexas**;  
+- Divide o sistema em **componentes compreensíveis**;  
+- **Integra áreas de negócio e tecnologia**;  
+- Mantida pela **OMG (Object Management Group)**.
+
+---
+
+### 🏗️ Tipos de Diagramas UML
+
+Os diagramas se dividem em **duas grandes categorias**:
+
+#### **1. Diagramas Estruturais**
+Mostram **a estrutura estática** do sistema.
+
+- **Diagrama de Classes:** mostra classes, atributos, métodos e relacionamentos.  
+- **Diagrama de Objetos:** representa instâncias específicas das classes.  
+- **Diagrama de Pacotes:** exibe módulos e dependências.  
+- **Diagrama de Componentes:** mostra os blocos que compõem o sistema.  
+- **Diagrama de Estrutura Composta:** visão lógica detalhada de partes do sistema.  
+- **Diagrama de Implantação:** mostra a configuração de hardware e software em execução.
+
+#### **2. Diagramas Comportamentais**
+Mostram **como o sistema se comporta dinamicamente**.
+
+- **Diagrama de Atividades:** representa o fluxo de processos.  
+- **Diagrama de Sequência:** mostra a troca de mensagens entre objetos ao longo do tempo.  
+- **Diagrama de Comunicação:** foca nas interações e mensagens entre componentes.  
+- **Diagrama de Casos de Uso:** ilustra as interações entre atores e funcionalidades.  
+- **Diagrama de Transição de Estados:** representa como um objeto muda de estado.  
+- **Diagrama de Tempo:** visualiza o comportamento dos objetos em relação ao tempo.  
+- **Diagrama de Perfil:** permite criar extensões específicas da UML.
+
+---
+
+### 🧾 Diagramas UML mais utilizados no dia a dia
+
+| Categoria | Diagrama | Finalidade |
+|------------|-----------|------------|
+| **Comportamental** | Caso de Uso | Mostra as interações entre usuários e o sistema. |
+| **Comportamental** | Atividades | Representa fluxos e processos. |
+| **Comportamental** | Sequência | Exibe a troca de mensagens entre objetos. |
+| **Comportamental** | Transição de Estados | Mostra mudanças de estado de um objeto. |
+
+---
+
+### 🧩 UML – Simbologia dos Casos de Uso
+
+Os **diagramas de casos de uso** possuem uma simbologia própria para representar **atores**, **casos de uso** e os diferentes **tipos de relacionamentos** entre eles.  
+A seguir, estão os principais elementos e suas regras:
+
+---
+
+### 👤 Atores
+
+Os **atores** representam os elementos que **interagem** com o sistema, podendo **enviar**, **receber** ou **trocar informações** com os casos de uso.
+
+- Podem ser **pessoas**, **organizações** ou **outros sistemas** externos.  
+- Cada ator deve ter um **nome identificador claro** e estar **fora do limite do sistema**.  
+- Os atores **só se comunicam com casos de uso**, nunca diretamente entre si.
+
+📌 **Exemplos de atores:**  
+`VENDEDOR`, `SECRETARIA`, `SISTEMA DE ESTOQUE`
+
+---
+
+### ⚙️ Casos de Uso
+
+Os **casos de uso** representam as **funcionalidades** ou **ações** que o sistema deve realizar, com base nos requisitos coletados.  
+
+**Regras de nomenclatura:**
+- Todo caso de uso deve iniciar com um **verbo no infinitivo**, pois expressa uma **ação**.  
+- O verbo deve ser seguido de um complemento que indique **o que será feito**.
+
+📌 **Exemplos de casos de uso:**  
+`CADASTRAR cliente`, `EMITIR relatório de vendas`, `VALIDAR documentos`
+
+---
+
+### 🔗 Relações entre Elementos
+
+#### 1. Associação
+- Representa a **comunicação direta** entre um **ator** e um **caso de uso**.  
+- Indica **quem executa** ou **utiliza** determinada funcionalidade.  
+- É representada por uma **linha contínua** ligando o ator ao caso de uso.
+
+📌 Exemplo:  
+O ator `VENDEDOR` está associado ao caso de uso `EMITIR nota fiscal`.
+
+---
+
+#### 2. Include (<<include>>)
+- Indica que um **caso de uso inclui outro obrigatoriamente**.  
+- O comportamento incluído **sempre será executado** como parte do caso principal.  
+- É usado para **evitar duplicação de comportamento** em vários casos.
+
+📌 Exemplo:  
+`PROCESSAR pedido` <<include>> `VALIDAR dados do cliente`
+
+💡 **Regra:** o caso de uso incluído **não pode existir sozinho**, ele **complementa** outro.
+
+---
+
+#### 3. Extend (<<extend>>)
+- Indica que um **caso de uso principal pode ser estendido** por outro em **situações específicas**.  
+- O caso estendido **não é obrigatório** e **só ocorre sob certas condições**.  
+- É usado para representar **variações ou exceções** no fluxo normal.
+
+📌 Exemplo:  
+`REALIZAR pagamento` <<extend>> `SOLICITAR confirmação de segurança`
+
+💡 **Regra:** o caso de uso estendido **só é ativado** se uma **condição específica** for satisfeita.
+
+---
+
+#### 4. Generalização
+- Representa uma **herança** entre **atores** ou **casos de uso**.  
+- O ator ou caso de uso **filho herda o comportamento** do pai, podendo **adicionar** ou **especializar** suas ações.
+
+📌 Exemplo:  
+O ator `FUNCIONÁRIO` pode ter especializações como `GERENTE` e `ATENDENTE`.  
+Ambos herdam comportamentos do ator pai, mas podem possuir ações específicas.
+
+---
+
+### 🧠 Resumo Visual (Simbologia)
+
+| Elemento         | Símbolo/Representação         | Significado Principal |
+|------------------|------------------------------|-----------------------|
+| 👤 **Ator** | Boneco (stick figure) | Representa quem interage com o sistema |
+| ⚙️ **Caso de uso** | Elipse | Representa uma funcionalidade do sistema |
+| 🔗 **Associação** | Linha contínua | Conecta ator e caso de uso |
+| ➕ **Include** | <<include>> (seta tracejada) | Caso obrigatório incluído |
+| ➕ **Extend** | <<extend>> (seta tracejada) | Caso opcional, executado sob condição |
+| 🧬 **Generalização** | Linha com triângulo | Herança entre atores ou casos |
+
+---
+
+A simbologia da UML em diagramas de casos de uso é essencial para **comunicar de forma visual e padronizada** as interações entre **usuários e sistema**.  
+Ela facilita o **entendimento do escopo**, a **validação de requisitos** e o **alinhamento entre equipe técnica e cliente**.
+
+--- 
+
+### 📌 Conclusão
+
+Nesta aula, aprendemos que **coletar requisitos** vai muito além de anotar pedidos — envolve **entender o contexto e a dor do usuário**.  
+As **User Stories** tornam o processo mais humano e comunicativo, enquanto a **UML** fornece uma **linguagem visual universal** para descrever como o sistema será construído.
+
+
+
 
