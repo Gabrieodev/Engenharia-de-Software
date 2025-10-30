@@ -653,6 +653,206 @@ Ela facilita o **entendimento do escopo**, a **validação de requisitos** e o *
 Nesta aula, aprendemos que **coletar requisitos** vai muito além de anotar pedidos — envolve **entender o contexto e a dor do usuário**.  
 As **User Stories** tornam o processo mais humano e comunicativo, enquanto a **UML** fornece uma **linguagem visual universal** para descrever como o sistema será construído.
 
+---
+
+## Aula 5 – Classes e Objetos
+
+### 🎯 Objetivo da Aula
+Compreender os conceitos fundamentais de **Classes e Objetos**, reconhecendo como esses elementos estruturam o desenvolvimento **orientado a objetos**.  
+Nesta aula, veremos **como modelar sistemas** com base em **atributos, métodos e relacionamentos**, utilizando **diagramas de classes UML**.
+
+---
+
+### 🧱 O que são Classes?
+
+Uma **classe** é um **modelo** ou **molde** que define as **características** e **comportamentos** de um tipo de objeto.  
+Ela descreve **quais dados (atributos)** e **ações (métodos)** um objeto terá.  
+Em outras palavras, a classe **define a forma**, e o **objeto é o que é criado** a partir dessa forma.
+
+📘 **Exemplo:**
+
+```text
+Classe: Pessoa
+Atributos: nome, idade, sexo
+Métodos: falar(), andar(), dormir()
+```
+
+Cada pessoa criada no sistema (Maria, João, Ana...) é um objeto, ou seja, uma instância da classe Pessoa.
+
+💡 Resumo:
+
+Classe → projeto, modelo.
+
+Objeto → instância criada em tempo de execução.
+
+Classe é definida durante o desenvolvimento.
+
+Objeto existe durante o processamento do sistema.
+
+🧩 Composição de uma Classe (em UML)
+Uma classe, em UML, é representada por um retângulo dividido em três partes:
+
+Parte	Conteúdo	Descrição
+🔹 Topo	Nome da classe	Identifica o tipo de objeto
+🔹 Meio	Atributos	Variáveis que descrevem o estado do objeto
+🔹 Base	Métodos	Funções que definem o comportamento
+
+📘 Exemplo em UML:
+
+markdown
+Copiar código
+-------------------------
+|        Pessoa         |
+-------------------------
+| nome: string          |
+| idade: int            |
+-------------------------
+| falar()               |
+| andar()               |
+-------------------------
+⚙️ Métodos
+Os métodos são funções dentro da classe que definem as ações que um objeto pode realizar.
+Eles são declarados dentro da própria classe e podem manipular ou alterar os valores de seus atributos.
+
+📌 Importante:
+
+Todos os objetos criados de uma classe herdam seus métodos e atributos.
+
+Métodos permitem o comportamento dinâmico dos objetos.
+
+🔍 Características dos Objetos
+Todo objeto possui três elementos essenciais:
+
+Característica	Descrição
+🪪 Identidade	Cada objeto tem uma identidade única que o diferencia dos demais.
+🧠 Estado	Representa os valores atuais de seus atributos (podem mudar durante o tempo).
+⚙️ Comportamento	Define as ações (métodos) que o objeto pode executar.
+
+📘 Objetos podem representar:
+
+Coisas tangíveis (carro, livro, pessoa)
+
+Processos (empréstimo, transação)
+
+Eventos (compra, reserva, inscrição)
+
+💡 Todo objeto:
+
+Está sempre associado a uma classe;
+
+É uma instância da classe;
+
+Compartilha estrutura e comportamento definidos pelo modelo;
+
+Pode ser criado, modificado e destruído.
+
+🧮 Diagrama de Classes
+Um diagrama de classes representa a estrutura estática de um sistema, mostrando as classes, atributos, métodos e relacionamentos entre elas.
+
+📘 Funções principais:
+
+Identificar classes e suas responsabilidades;
+
+Visualizar a modelagem de dados e regras de negócio;
+
+Ajudar a projetar tabelas de banco de dados.
+
+💡 Cada classe do diagrama geralmente se torna uma tabela no banco de dados.
+
+🔗 Tipos de Relacionamentos entre Classes
+Tipo	Símbolo	Descrição
+🧬 Generalização / Especialização (Herança)	Triângulo	Uma classe filha herda atributos e métodos da classe pai.
+🔄 Associação	Linha simples	Conexão entre objetos (ex: Cliente faz Pedido).
+⚫ Agregação	Diamante aberto	Relação onde uma classe contém outras, mas as partes têm vida independente.
+⚫ Composição	Diamante fechado	Relação onde as partes não existem sem o todo.
+
+🧩 O que são Relacionamentos?
+Um relacionamento representa a conexão física ou conceitual entre objetos ou classes.
+
+📘 Exemplo:
+
+objectivec
+Copiar código
+CLIENTE        PEDIDO
+   1           *
+👉 Um cliente pode fazer vários pedidos, mas cada pedido pertence a um cliente.
+
+🔢 Cardinalidade / Multiplicidade
+A cardinalidade mostra quantos objetos de uma classe podem estar associados a objetos de outra classe.
+
+Cardinalidade	Significado
+1	Exatamente um
+0..1	Zero ou um
+*	Muitos
+1..*	Um ou muitos
+N..M	Entre N e M
+
+📘 Exemplo:
+
+Em um sistema escolar, um Aluno pode se matricular em 1 curso,
+e cada Curso pode ter nenhum ou vários alunos.
+
+🧬 Generalização e Especialização (Herança)
+A herança é um tipo de relacionamento em que uma subclasse herda atributos e métodos de uma superclasse.
+
+📘 Exemplo:
+
+makefile
+Copiar código
+Superclasse: Pessoa
+  ├── nome
+  ├── endereço
+  └── telefone
+
+Subclasse: Pessoa Física
+  ├── cpf
+  ├── dataNascimento
+  └── filiação
+
+Subclasse: Pessoa Jurídica
+  ├── cnpj
+  └── inscriçãoEstadual
+💡 As subclasses complementam e especializam a superclasse, que fornece características comuns.
+
+🧠 Polimorfismo
+Polimorfismo significa “muitas formas”.
+Ele ocorre quando diferentes classes herdam o mesmo método, mas o implementam de maneiras distintas.
+
+📘 Exemplo:
+A superclasse Forma possui o método calcularArea().
+As subclasses Retângulo, Triângulo e Quadrado herdam esse método, mas cada uma calcula a área de forma diferente.
+
+🧩 Composição
+Na composição, uma classe é formada pela reunião de outras classes, mas os componentes não têm existência independente.
+Se o todo for destruído, as partes também são.
+
+📘 Exemplo:
+
+Uma classe Carro é composta por Motor, Rodas e Portas.
+Se o Carro deixa de existir, seus componentes também.
+
+🧱 Símbolo: Diamante fechado (⚫)
+
+⚪ Agregação
+Na agregação, as classes estão associadas, mas podem existir separadamente.
+A eliminação do todo não afeta a existência das partes.
+
+📘 Exemplo:
+
+Um Departamento agrega vários Funcionários.
+Se o Departamento for excluído, os Funcionários continuam existindo.
+
+🧱 Símbolo: Diamante aberto (⚪)
+
+💭 Reflexão Final
+Definir corretamente as classes, objetos e relacionamentos é essencial para o sucesso de um sistema orientado a objetos.
+Esses elementos estruturam o software, facilitam a reutilização de código, manutenção e evolução do projeto.
+
+📚 Lembre-se:
+
+Uma classe bem projetada reflete claramente as regras do negócio.
+
+Os diagramas de classes UML são ferramentas essenciais para planejar e comunicar a arquitetura do sistema.
 
 
 
